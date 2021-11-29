@@ -1,0 +1,16 @@
+{
+    "name": "EasterRts.Common.Cores",
+    "rootNamespace": "EasterRts.Common.Cores",
+    "references": [
+        "GUID:b7c6074f9afe43a45924cc3d87662045"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

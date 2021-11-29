@@ -1,0 +1,21 @@
+{
+    "name": "EasterRts.Battle",
+    "rootNamespace": "EasterRts.Battle",
+    "references": [
+        "GUID:40f8c0731bae03d45964fbcf9ea51578",
+        "GUID:96860b30f840abd4d84ab1b2ea166679",
+        "GUID:e95282bb962ee3247b3ef15025150f8e",
+        "GUID:4b81a7eb2b966db40864713dd44fb192",
+        "GUID:1b9fe7e3793894148bb9549e1060dcb0",
+        "GUID:b7c6074f9afe43a45924cc3d87662045"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
