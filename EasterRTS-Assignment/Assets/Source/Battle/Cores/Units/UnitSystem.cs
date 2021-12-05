@@ -1,5 +1,6 @@
 ﻿using EasterRts.Battle.Data.Units;
 using EasterRts.Common.Cores;
+using EasterRts.Utilities;
 using EasterRts.Utilities.Collections;
 using Sirenix.OdinInspector;
 using System.Linq;
@@ -39,12 +40,13 @@ namespace EasterRts.Battle.Cores.Units {
 
         internal UnitSystem(UnitSystemData data, BattleCore context) : base(context, CoreId.Undefined) {
             _units = data.Units
+                .Take(GlobalSettings.AllowedUnitsNumber)
                 .Select(unitData => new UnitCore(unitData, this))
                 .ToOrderedSet();
         }
 
         internal void Initialize(UnitSystemData data) {
-            foreach (var unitData in data.Units) {
+            foreach (var unitData in data.Units.Take(GlobalSettings.AllowedUnitsNumber)) {
                 var unit = IdToCore.Get<UnitCore>(unitData.Id);
                 unit.Initialize(unitData);
             }

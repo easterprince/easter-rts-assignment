@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Global Settings
   m_EditorClassIdentifier: 
   _enableAsynchronousExecution: 1
+  _unitsNumber: 200
