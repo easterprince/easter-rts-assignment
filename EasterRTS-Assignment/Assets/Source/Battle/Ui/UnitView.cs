@@ -26,6 +26,10 @@ namespace EasterRts.Battle.Ui {
         [SerializeField]
         private Text _text;
 
+        private float _lastFpsUpdateTime = -1;
+        private int _lastFpsUpdateFramesCount = 0;
+        private float _lastFps = 0;
+
 
         // Life cycle.
 
@@ -46,6 +50,13 @@ namespace EasterRts.Battle.Ui {
                 message.AppendLine($@"- Destination: {core.Movement.Destination}.");
                 message.AppendLine($@"- Intention: {core.Intention}.");
             }
+            if (Time.realtimeSinceStartup -_lastFpsUpdateTime >= 1) {
+                _lastFps = (Time.renderedFrameCount - _lastFpsUpdateFramesCount) / (Time.realtimeSinceStartup - _lastFpsUpdateTime);
+                _lastFpsUpdateTime = Time.realtimeSinceStartup;
+                _lastFpsUpdateFramesCount = Time.renderedFrameCount;
+            }
+            message.AppendLine("========================================");
+            message.AppendLine($"FPS: {_lastFps:f1}");
             _text.text = message.ToString();
         }
 
